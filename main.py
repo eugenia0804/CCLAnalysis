@@ -1,11 +1,10 @@
-from Code.utils import get_questions, get_answers
+from code.utils import get_questions, get_answers
 from prompts import formulate_prompt
 from llm import get_llm, get_openai
 import json
 import pandas as pd
 import re
 
-iteration = 2
 def classify_questions(index,start_q,end_q):
     sys_prompt, prompt = formulate_prompt(index,start_q,end_q)
     llm = get_openai()
@@ -63,4 +62,4 @@ def run_all(index, iteration):
   return 
 
 print('work-stream began')
-run_all(index = 2, iteration = 2)
+run_all(index = 2, iteration = 1)
