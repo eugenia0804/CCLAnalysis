@@ -1,0 +1,68 @@
+
+        Inmagine yourself as a education worker, you are developing a series of after-class exercise for high school students.
+        You have determined a several practice you want to achieve by designing those question.
+        I want you to determine whether the following questions reflect that specific practice or not.
+
+        
+        The name of the practice you need to pay attention to is `Algorithm Practices`,
+        which is consisted of subpractices includes 
+`Using an algorithm to solve a problem`,
+`Selecting an appropriate algorithm to solve a problem`,
+`Assessing the efficiency, correctness, and clarity of an algorithm`,
+`Modifying an algorithm to better address a problem`,
+`Designing and constructing algorithms.
+        The practice is defined as A question that prompts students to engage in one or more of the subpractices. Modifying or designing an algorithm might involve pseudo-code only but can also include implementing it in a computational language (e.g. text or block based code)..
+        Below is one example input and output  (NO NEED TO FOLLOW): 
+
+        
+        Determine whether the following 10 questions reflect the given practice or not
+        (Do not try to answer the questions):
+
+        
+        '''C
+        
+81: Reset the model and increase the sample size to 40. Run the model for at least 200 samples. What do you notice about the std-dev-means and the shape of the sample-data-distribution?
+82: Compare the `std-dev-means` between a sample size of 10 and a sample size of 40. By what factor was the standard deviation reduced? (Hint: divide the two numbers to create a fraction)
+83: At a certain point, the sample-data-distribution becomes approximately Normal. What do you think is the cut-off for a sample size that produces an approximately Normal sampling distribution?
+84: Mr. Mills takes a sample of only 10 people and records their score on a particular IQ test. He is confident that he can make inferences about this sample using a Normal approximation. Why can he do this, even though his sample size was less than 30?
+
+
+85: In real life, we usually don't know what the population distribution looks like. Why can we make inferences about the population mean based on a large sample size?
+
+
+86: a) If the filling equipment is functioning properly, what is the probability that the weight of the ore in a randomly selected car will be 70.7 tons or more?  Show your work.
+
+
+87: b)  Suppose that the weight of ore in a randomly selected car is 70.7 tons.  Would that fact make you suspect that the loading mechanism is overfilling cars?  Justify your answer.
+
+
+88: c) If the filling equipment is functioning properly, what is the probability that a random sample of 10 cars will have a mean weight of 70.7 tons or more?  Show your work.
+
+
+89: d) Based on your answer in part (c), if a random sample of 10 cars had a mean ore weight of 70.7 tons, would you suspect that the loading mechanism was overfilling the cars?  Justify your answer.
+
+
+90: What would be the shape of the sampling distribution of x¯?
+        '''
+        
+        Return the answer for all 10 questions in the a easily dumped JSON format like this 
+
+        {
+            "Question_number listed in prompt(eg. "1")":
+                {
+                    "Question": "Original text of question 1",
+                    "Reasons": "The question is intended for students to perform the work of ..., which does/does not reflect the `practice name`.",
+                    "Answer": "Yes/No"
+                }
+            
+             "Question_number listed in prompt(eg. "12")":
+                {
+                    "Question": "Original text of question 1",
+                    "Reasons": "The question is intended for students to perform the work of ..., which does/does not reflect the `practice name`.",
+                    "Answer": "Yes/No"
+                }
+            <continue...>
+        }
+         
+        USe `` if you want to quote some phrases.
+        

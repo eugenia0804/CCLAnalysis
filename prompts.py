@@ -85,7 +85,7 @@ def formulate_prompt(index, start_q, end_q):
         """
         
     QUESTION_INTRO = """
-        Determine whether the following questions reflect the given practice or not
+        Determine whether the following 10 questions reflect the given practice or not
         (Do not try to answer the questions):\n
         """
 
@@ -121,19 +121,20 @@ def formulate_prompt(index, start_q, end_q):
                     "Reasons": "The question is intended for students to perform the work of ..., which does/does not reflect the `practice name`.",
                     "Answer": "Yes/No"
                 }
-            ...
+            
              "Question_number listed in prompt(eg. "12")":
                 {
                     "Question": "Original text of question 1",
                     "Reasons": "The question is intended for students to perform the work of ..., which does/does not reflect the `practice name`.",
                     "Answer": "Yes/No"
                 }
+            <continue...>
         }
         """
 
 
     OUTPUT_PROMPT = f"""
-        Return the answer in the a easily dumped JSON format like this \n{OUTPUT_TEMPLATE} （the sample has 2 questions in total)
+        Return the answer for all 10 questions in the a easily dumped JSON format like this \n{OUTPUT_TEMPLATE} 
         USe `` if you want to quote some phrases.
         """
         
