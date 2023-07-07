@@ -1,14 +1,14 @@
 from code.utils import get_questions, get_answers
 from prompts import formulate_prompt
-from llm import get_llm, get_openai
+from llm import get_openai
 import json
 import pandas as pd
 import re
 
 def classify_questions(index,start_q,end_q):
     sys_prompt, prompt = formulate_prompt(index,start_q,end_q)
-    llm = get_openai()
-    result = llm(sys_prompt + prompt)  
+    #llm = get_openai()
+    result = get_openai(sys_prompt + prompt)  
     print('llm completed')
     return sys_prompt + prompt , result
 
