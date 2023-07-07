@@ -21,3 +21,8 @@ Analysis on CT-STEM practice questions using LLM
 ├── LICENSE                               # License information for the project
 └── README.md                             # README file with project information
 ```
+## Reflection
+
+iteration 1: 
+1. Code to handle incomplete output
+2. Modify prompt to make it better handle false positives
