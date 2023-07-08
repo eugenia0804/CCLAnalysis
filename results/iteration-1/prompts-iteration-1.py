@@ -14,6 +14,7 @@ def formulate_prompt(index, start_q, end_q):
 
     CODEBOOK_PROMPT = f"""
         The name of the practice you need to pay attention to is `{practice_name}`,
+        which is consisted of subpractices includes {subpractices}.
         The practice is defined as {explanation}.
         Below is one example input and output  (NO NEED TO FOLLOW): \n
         """
@@ -106,7 +107,7 @@ def formulate_prompt(index, start_q, end_q):
                 {
                     "QuestionNumber": "2",
                     "Question": "Original text of question 2",
-                    "Reasons": "The focus of the questions is the step to..., which does not reflect the given subpractices.",
+                    "Reasons": "The focus of the questions is the step to..., which does not reflect any of the listed subpractices.",
                     "Answer": "No"
                 }
         }
@@ -115,6 +116,13 @@ def formulate_prompt(index, start_q, end_q):
     OUTPUT_TEMPLATE = """
         {
             "Question_number listed in prompt(eg. "1")":
+                {
+                    "Question": "Original text of question 1",
+                    "Reasons": "The question is intended for students to perform the work of ..., which does/does not reflect the `practice name`.",
+                    "Answer": "Yes/No"
+                }
+            
+             "Question_number listed in prompt(eg. "12")":
                 {
                     "Question": "Original text of question 1",
                     "Reasons": "The question is intended for students to perform the work of ..., which does/does not reflect the `practice name`.",

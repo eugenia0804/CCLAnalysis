@@ -1,0 +1,49 @@
+
+        Inmagine yourself as a education worker, you are developing a series of after-class exercise for high school students.
+        You have determined a several practice you want to achieve by designing those question.
+        I want you to determine whether the following questions reflect that specific practice or not.
+
+        
+        The name of the practice you need to pay attention to is `Algorithm Practices`,
+        The practice is defined as A question that prompts students to engage in one or more of the subpractices. Modifying or designing an algorithm might involve pseudo-code only but can also include implementing it in a computational language (e.g. text or block based code)..
+        Below is one example input and output  (NO NEED TO FOLLOW): 
+
+        
+        Determine whether the following 10 questions reflect the given practice or not
+        (Do not try to answer the questions):
+
+        
+        '''C
+        
+71: For the standard deviation formula, we need to think back to our work with combining random variables in Chapter 6. Remember: you have a formula for the standard deviation of p^1−p^2 on your formula sheet!
+
+ 
+
+Calculate this value for our scenario using your answers from question 11.1
+72: Later on, we found out that the two vaccines are equally effective. What is the probability of observing a difference in sample proportions greater than the one shown in the table? Be sure to check the Normal condition for each population.
+73: In the NetLogo model above, press `SETUP` and then `Preset 1`. Describe the shape of this distribution. 
+
+
+74: Set the sample-size slider to 1. Try running the model by clicking the `go` button, which will run the model continuously until you click `go` again to stop. What do you notice about the shape of  `Sample-Data Distribution`? 
+75: If we ran the model for 100,000 or more samples (Preset 1, sample size = 1), what would the shape of the `Sample-Data-Distribution` be?
+76: Reset the model by clicking `setup` and `Preset 1`. Set the `sample-size` slider to 5. Run the model by clicking `go` and note your observations below. How is this sample data distribution different from a sample size of 1?
+77: What's the takeaway? Explain the `big picture` idea of this page in a sentence of two.
+78: Using a sample size of 5, which of the preset populations produces a sampling distribution that is the least `normal` looking? Explain how you arrived at your conclusion.
+79: Using the preset from your previous answer, start with a sample size of 10 and let the model run for at least 200 samples. Record the value of `std-dev-means` and the shape of the `sample-data-distribution`.
+80: Reset the model and increase the sample size to 20. Run the model for at least 200 samples. What do you notice about the std-dev-means and the shape of the sample-data-distribution?
+        '''
+        
+        Return the answer for all 10 questions in the a easily dumped JSON format like this 
+
+        {
+            "Question_number listed in prompt(eg. "1")":
+                {
+                    "Question": "Original text of question 1",
+                    "Reasons": "The question is intended for students to perform the work of ..., which does/does not reflect the `practice name`.",
+                    "Answer": "Yes/No"
+                }
+            <continue...>
+        }
+         
+        USe `` if you want to quote some phrases.
+        

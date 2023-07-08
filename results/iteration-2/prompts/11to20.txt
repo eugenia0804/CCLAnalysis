@@ -1,0 +1,49 @@
+
+        Inmagine yourself as a education worker, you are developing a series of after-class exercise for high school students.
+        You have determined a several practice you want to achieve by designing those question.
+        I want you to determine whether the following questions reflect that specific practice or not.
+
+        
+        The name of the practice you need to pay attention to is `Algorithm Practices`,
+        The practice is defined as A question that prompts students to engage in one or more of the subpractices. Modifying or designing an algorithm might involve pseudo-code only but can also include implementing it in a computational language (e.g. text or block based code)..
+        Below is one example input and output  (NO NEED TO FOLLOW): 
+
+        
+        Determine whether the following 10 questions reflect the given practice or not
+        (Do not try to answer the questions):
+
+        
+        '''C
+        
+11: Press the `collect sample` button 30 times. Drag the word `Mean` from the table to the horizontal axis of the empty graph. The graph is starting to take shape, but it cannot be called a sampling distribution yet... Why not?
+12: A school administrator took a sample of 2 AP statistics students and found their average AP test score to be 1.5. Based on that sample, the Administrator is claiming that the mean test score for all AP stats students at ETHS is 1.5. Do you have substantial evidence to refute their claim? You just created a statistical model - use it to explain to the administrator that their estimate is probably w...
+13: What was wrong with the administrator's sample?
+14: On the left side of the screen you see a table. Click on one of the cells in the row with `index` 17. This should highlight one single dot on the dotplot. Explain what that dot represents in the context of the situation.
+15: Suppose an administrator is claiming that the true Mean score of the population is 3.2. Do you have convincing evidence to refute their claim? Explain.
+16: First, we'll create the same sampling distribution that we created yesterday. Use the model above to create the sampling distribution for the mean scores of samples of 2 students (n=2) taken from a population of 48 students (N=48).
+
+1) Set the slider and click `setup` and `collect samples.` The sampling will happen faster if you pull the `model speed` slider all the way to the right.
+
+2) Click the...
+17: Now we're going to do the same thing, except instead of calculating the mean score for our sample, we're going to calculate the MAXIMUM score of our sample. We (Mr. Mickelson and Mr. Mills) made this model, so we can change it in order to explore a different statistic. We're going to change the model to find the maximum of each sample. 
+
+Note: If you need to start fresh just reload the page and ev...
+18: Now erase that data (either with the trashcan icon under `tables` or refreshing the page) and do the same thing using the minimum statistic (just repeat what you did for Max, just use the word Min). Is the mean of this sampling distribution the same as the actual value of the population minimum?
+19: Do you think the mean is a biased estimator? Explain your reasoning.
+20: On the next page we'll use the same model but increase the size of our sample (n). What do you think will happen to the sampling distribution? How will that show up in the model?
+        '''
+        
+        Return the answer for all 10 questions in the a easily dumped JSON format like this 
+
+        {
+            "Question_number listed in prompt(eg. "1")":
+                {
+                    "Question": "Original text of question 1",
+                    "Reasons": "The question is intended for students to perform the work of ..., which does/does not reflect the `practice name`.",
+                    "Answer": "Yes/No"
+                }
+            <continue...>
+        }
+         
+        USe `` if you want to quote some phrases.
+        
