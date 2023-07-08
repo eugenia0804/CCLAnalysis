@@ -5,6 +5,7 @@ Confusion Matrix:
  [25 15]]
 
 ## Propmt Construction
+‘’‘
 
         Inmagine yourself as a education worker, you are developing a series of after-class exercise for high school students.
         You have determined a several practice you want to achieve by designing those question.
@@ -64,7 +65,7 @@ Is the 10% condition satisfied? Why or why not? If so, calculate the standard de
         }
          
         USe `` if you want to quote some phrases.
-
+’‘’
 
 ## Model Usage
 text-davinci-003
