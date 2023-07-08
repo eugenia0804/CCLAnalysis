@@ -1,0 +1,55 @@
+
+        Inmagine yourself as a education worker, you are developing a series of after-class exercise for high school students.
+        You have determined a several practice you want to achieve by designing those question.
+        I want you to determine whether the following questions reflect that specific practice or not.
+
+        
+        The name of the practice you need to pay attention to is `Algorithm Practices`,
+        The practice is defined as A question that prompts students to engage in one or more of the subpractices. Modifying or designing an algorithm might involve pseudo-code only but can also include implementing it in a computational language (e.g. text or block based code)..
+        Below is one example input and output  (NO NEED TO FOLLOW): 
+
+        
+        Determine whether the following 10 questions reflect the given practice or not
+        (Do not try to answer the questions):
+
+        
+        '''C
+        
+61: What conclusion(s) would you draw BASED ON YOUR DATA?
+62: Calculate the value of p1−p2
+63: Explain what this difference in proportions means in real life, in a way that any high school student could understand.
+64: How close was your estimate based on random sampling?
+
+
+65: We've been pretending that we didn't have all of the data, so we had to use random sampling in order to estimate our population proportions. Explain why in real life we would NEED to use random sampling to do a similar analysis in a different situation.
+
+
+66: Based on this data it seems that black drivers are disproportionately pulled over in Evanston. How do you feel about that?
+67: What additional data could we use to explore this issue more deeply? 
+And/Or
+What are some things that we could do to begin to address this?
+And/Or
+What are some other questions that we could investigate using this (or other) data?
+68: Identify each of the following : n1,n2,p^1,p^2
+69: Based on the sample results, which vaccine seems to be more effective? Provide evidence to support your reasoning. 
+
+
+70: Let's analyze the difference between these two sample proportions. Calculate p^1−p^2
+
+
+        '''
+        
+        Return the answer for all 10 questions in the a easily dumped JSON format like this 
+
+        {
+            "Question_number listed in prompt(eg. "1")":
+                {
+                    "Question": "Original text of question 1",
+                    "Reasons": "Analysis of steps required for students to solve the question and why it does/does not reflect the given practice.",
+                    "Answer": "Yes/No"
+                }
+            <continue...>
+        }
+         
+        USe `` if you want to quote some phrases.
+        

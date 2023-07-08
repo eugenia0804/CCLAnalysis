@@ -117,7 +117,7 @@ def formulate_prompt(index, start_q, end_q):
             "Question_number listed in prompt(eg. "1")":
                 {
                     "Question": "Original text of question 1",
-                    "Reasons": "Analysis of steps required for students to solve the question and why it does/does not reflect the given practice.",
+                    "Reasons": "The question is intended for students to perform the work of ..., which does/does not reflect the `practice name`.",
                     "Answer": "Yes/No"
                 }
             <continue...>

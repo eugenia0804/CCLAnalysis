@@ -1,6 +1,6 @@
 # Result Summary
-The accuracy of the model was 0.6444444444444445 when tested, with a confusion matrix of:
-
+The accuracy score of the model is 0.6444444444444445
+The confusion matrix is as follows:
 [[43  7]
  [25 15]]
 
