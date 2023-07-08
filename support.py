@@ -14,7 +14,7 @@ def combine_data(start, end):
             combined_data.update(data)
 
     # Save the combined data to a new JSON file
-    output_file = f'Results/iteration-1/final/{start}to{end}.json'
+    output_file = f'Results/iteration-2/final/{start}to{end}.json'
     with open(output_file, 'w') as file:
         json.dump(combined_data, file, indent=4)
 

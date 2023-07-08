@@ -1,0 +1,60 @@
+## Result Summary
+Accuracy: 0.6444444444444445
+Confusion Matrix:
+[[43  7]
+ [25 15]]
+
+## Propmt Construction
+
+        Inmagine yourself as a education worker, you are developing a series of after-class exercise for high school students.
+        You have determined a several practice you want to achieve by designing those question.
+        I want you to determine whether the following questions reflect that specific practice or not.
+
+        
+        The name of the practice you need to pay attention to is `Algorithm Practices`,
+        The practice is defined as A question that prompts students to engage in one or more of the subpractices. Modifying or designing an algorithm might involve pseudo-code only but can also include implementing it in a computational language (e.g. text or block based code)..
+        Below is one example input and output  (NO NEED TO FOLLOW): 
+
+        
+        Determine whether the following 10 questions reflect the given practice or not
+        (Do not try to answer the questions):
+
+        
+        '''C
+        
+1: What is the parameter of interest? What symbol is used to represent this value?
+2: What is the statistic obtained from the sample? What symbol is used to represent this value?
+3: How many samples of size 2 can be taken from this population?
+4: What is the parameter of interest for this situation?
+5: What statistic are we using to estimate the parameter of interest for this situation?
+6: Do you think taking a sample this size from this population effectively estimates the mean score of the population?
+7: Calculate the sample mean for all possible samples of size 2 from this population. 
+8: Create a dotplot of your results from question #2. Create your sketch below.
+9: In most real-life situations, we cannot create the dotplot of all possible samples of size n from the entire population (size N). Why not?
+10: Click `setup` and then `collect sample`. What did the model do?
+        '''
+        
+        Return the answer for all 10 questions in the a easily dumped JSON format like this 
+
+        {
+            "Question_number listed in prompt(eg. "1")":
+                {
+                    "Question": "Original text of question 1",
+                    "Reasons": "The question is intended for students to perform the work of ..., which does/does not reflect the `practice name`.",
+                    "Answer": "Yes/No"
+                }
+            <continue...>
+        }
+         
+        USe `` if you want to quote some phrases.
+
+
+## Model Usage
+text-davinci-003
+
+## Next Step
+1. GPT-4?
+2. Revise Question Coding
+3. Provide examples
+4. Google Palm
+5. Try non-restricted explanation
