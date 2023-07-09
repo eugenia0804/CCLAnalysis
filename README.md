@@ -23,11 +23,9 @@ Analysis on CT-STEM practice questions using LLM
 ```
 ## Command to run first ten questions
 
-Set the index and iteration variables by executing the following command:
 ```
-set index=2 && set iteration=4
+$ export index=2
+$ export iteration=4
+$ python example.py
 ```
-Run the **main.py** file and execute the desired code by running the following command:
-```
-python main.py -c "print('Running first ten......'); run_first_ten(%index%, %iteration%)"
-```
+You should see the resulted json structured gpt respond printed out.
