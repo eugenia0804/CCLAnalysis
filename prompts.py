@@ -15,11 +15,11 @@ def formulate_prompt(index, start_q, end_q):
     CODEBOOK_PROMPT = f"""
         The name of the practice you need to pay attention to is `{practice_name}`,
         The practice is defined as {explanation}.
-        Below is one example input and output  (NO NEED TO FOLLOW): \n
         """
     
     if index == 1:
         EXAMPLES = """
+        Below is one example input and output  (NO NEED TO FOLLOW): \n
         User:
         1. 	Press "Set up" and "Go" to run the simulation. What do you see happening? Does this make sense- remember, there is air resistance?
         Does this question reflect the the practice of `Computational Modeling and Simulation Practices` or not?
