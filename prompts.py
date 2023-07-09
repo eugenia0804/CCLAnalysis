@@ -135,7 +135,52 @@ def formulate_prompt(index, start_q, end_q):
     
     return SYSTEM_PROMPT, PROMPT
 
-SYSTEM_PROMPT, PROMPT = formulate_prompt(1,1,2)
-print("prompt finished")
-print(SYSTEM_PROMPT+PROMPT)
 
+
+def formulate_chat_prompt(index, start_q, end_q):
+    codebook = get_codebook()
+    practice_name, subpractices, explanation = get_codebookinfo(codebook, index)
+    INTRO_PROMPT = f"""
+        Inmagine yourself as a education worker, you are developing a series of after-class exercise for high school students.
+        You have determined a several practice you want to achieve by designing those question.
+        I want you to determine whether the following questions reflect that specific practice, `{practice_name}`, or not.\n
+        """
+
+    CODEBOOK_PROMPT = f"""
+        The practice is defined as {explanation}.
+        """
+        
+    OUTPUT_TEMPLATE = """
+        {
+            "Question_number listed in prompt(eg. "1")":
+                {
+                    "Question": "Original text of question 1",
+                    "Reasons": "Analysis of steps required for students to solve the question.",
+                    "Answer": "Yes/No"
+                }
+            <continue...>
+        }
+        """
+
+
+    OUTPUT_PROMPT = f"""
+        Return the answer for all 10 questions in the a easily dumped JSON format like this \n{OUTPUT_TEMPLATE} 
+        USe `` if you want to quote some phrases.
+        """
+        
+    QUESTION_INTRO = """
+        Determine whether the following 10 questions reflect the given practice or not
+        (Do not try to answer the questions):\n
+        """
+
+    QUESTION_TEXT = f"""
+        '''C
+        {get_questioninfo(start_q, end_q)}
+        '''
+        """
+    
+    
+    SYSTEM_PROMPT = INTRO_PROMPT + CODEBOOK_PROMPT + OUTPUT_PROMPT
+    USER_PROMPT = QUESTION_INTRO + QUESTION_TEXT
+    return SYSTEM_PROMPT, USER_PROMPT
+    

@@ -1,16 +1,16 @@
 from code.utils import get_questions, get_answers
-from prompts import formulate_prompt
-from llm import get_openai
+from prompts import formulate_chat_prompt
+from llm import get_gpt_response
 import json
 import pandas as pd
 import re
 
 def classify_questions(index,start_q,end_q):
-    sys_prompt, prompt = formulate_prompt(index,start_q,end_q)
+    sys_prompt, usr_prompt = formulate_chat_prompt(index,start_q,end_q)
     #llm = get_openai()
-    result = get_openai(sys_prompt + prompt)  
+    result = get_gpt_response(sys_prompt, usr_prompt)  
     print('llm completed')
-    return sys_prompt + prompt , result
+    return sys_prompt + usr_prompt , result
 
 def store_result(index,start_q,end_q,iteration): 
   [prompt, results] = classify_questions(index,start_q,end_q)
@@ -62,4 +62,4 @@ def run_all(index, iteration):
   return 
 
 print('work-stream began')
-run_all(index = 2, iteration = 3)
+run_all(index = 2, iteration = 4)
