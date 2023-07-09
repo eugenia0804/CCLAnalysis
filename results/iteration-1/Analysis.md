@@ -1,57 +1,85 @@
-# Result Summary
-The accuracy score of the model is 0.6444444444444445
-The confusion matrix is as follows:
-[[43  7]
- [25 15]]
+### Topline Findings
+Accuracy: 64.5%
+Confusion Matrix
+|       | Predicted Positive | Predicted Negative |
+| ----- | ------------------ | ------------------ |
+| True  | 43                 | 7                  |
+| False | 25                 | 15                 |
 
-## Prompt Construction
-Imagine yourself as a education worker, developing a series of after-class exercises for high school students. You have determined a practice you want to achieve by designing these questions - **Algorithm Practices**.
-The practice is defined as "A question that prompts students to engage in one or more of the following subpractices:
-* Using an algorithm to solve a problem
-* Selecting an appropriate algorithm to solve a problem
-* Assessing the efficiency, correctness, and clarity of an algorithm
-* Modifying an algorithm to better address a problem
-* Designing and constructing algorithms
+### Difference from Last Iteration
+Shorten the prompt to make it more efficient & clear. Specific changes include remove the subpractices list & reduce the number of samples in the template.
 
-An example input and output is included below: 
 
-Determine whether the following 10 questions reflect the given practice or not (do not try to answer the questions): 
-* 41: Test your hypothesis by changing the sample size. How does the sampling distribution change? 
-* 42: Which values for n and p will make the sampling distribution look the most normal? Perform some experiments using the model and report your findings here.
-* 43: The Evanstonian is concerned about the effect of vaping and e-cigarettes at ETHS. The Evanstonian staff poll a simple random sample of 150 ETHS students and ask, “Yes or No? Do you think that vaping (and/or e-cigarettes) are a problem at ETHS?” Is the 10% condition satisfied? Why or why not? If so, calculate the standard deviation of the sampling distribution of p^.
-* 44: Suppose that 30% of all ETHS students respond “Yes” to this question. Let p^ be the sample proportion of ETHS students who respond “Yes” to this question. What is the mean of the sampling distribution of p^?
-* 45: What is the shape of the sampling distribution of p^? Explain your reasoning and show work.
-* 46: What is the probability that, in a random sample of 150 ETHS students, less than 25% will respond `Yes`. 
-* 47: In a congressional district, 55% of registered voters are Democrats. Suppose we take a random sample of 100 voters from this congressional district. What is the probability of getting less than 50% Democrats in a random sample of size 100?
-* 48: The Chicago Tribune asked a random sample of 750 Chicago residents. `Do you wear a face covering in public?` Based on a previous study by the IDPH, we know that 50% of ALL Chicago residents actually wear a face covering in public. Let p^ be the sample proportion who say that they wear a face covering in public. What is the probability that, in a random sample of 750, more than 75% will respond `Yes`?
-* 49: If the claim is true what could that suggest about racial bias in EPD?
-* 50: The idea that Police aren't always fair in carrying out their duties can bring up a lot of feelings and experiences. Do you have any personal thoughts or experiences about this topic that you'd like to share?
+### Example Prompt
+Imagine yourself as an education worker, you are developing a series of after-class exercises for high school students. You have determined several practices you want to achieve by designing these questions. Your task is to determine whether the following questions reflect that specific practice or not.
 
-The model will return the answer in a easily dumped JSON format: 
+The name of the practice you need to pay attention to is `Algorithm Practices`, which is consisted of subpractices includes 
+`Using an algorithm to solve a problem`,
+`Selecting an appropriate algorithm to solve a problem`,
+`Assessing the efficiency, correctness, and clarity of an algorithm`,
+`Modifying an algorithm to better address a problem`,
+`Designing and constructing algorithms`.
+The practice is defined as a question that prompts students to engage in one or more of the subpractices. Modifying or designing an algorithm might involve pseudo-code only but can also include implementing it in a computational language (e.g. text or block-based code).
 
-```
-{
-    "Question_number listed in prompt(eg. "1")": 
-        {
-            "Question": "Original text of question 1",
-            "Reasons": "The question is intended for students to perform the work of ..., which does/does not reflect the `practice name`.",
-            "Answer": "Yes/No"
-        }
-    
-    "Question_number listed in prompt(eg. "12")":
-        {
-            "Question": "Original text of question 1",
-            "Reasons": "The question is intended for students to perform the work of ..., which does/does not reflect the `practice name`.",
-            "Answer": "Yes/No"
-        }
-    <continue...>
-}
+Determine whether the following 10 questions reflect the given practice or not (Do not try to answer the questions):
+
+```C
+1: What is the parameter of interest? What symbol is used to represent this value?
+2: What is the statistic obtained from the sample? What symbol is used to represent this value?
+3: How many samples of size 2 can be taken from this population?
+4: What is the parameter of interest for this situation?
+5: What statistic are we using to estimate the parameter of interest for this situation?
+6: Do you think taking a sample this size from this population effectively estimates the mean score of the population?
+7: Calculate the sample mean for all possible samples of size 2 from this population.
+8: Create a dotplot of your results from question #2. Create your sketch below.
+9: In most real-life situations, we cannot create the dotplot of all possible samples of size n from the entire population (size N). Why not?
+10: Click `setup` and then `collect sample`. What did the model do?
 ```
 
-## Model Usage
-The model used is `text-davinci-003`. 
+Return the answer for all 10 questions in an easily dumped JSON format like this:
 
-## Next Steps
+```JSON
+ {
+            "Question_number listed in prompt(eg. "1")":
+                {
+                    "Question": "Original text of question 1",
+                    "Reasons": "The question is intended for students to perform the work of ..., which does/does not reflect the `practice name`.",
+                    "Answer": "Yes/No"
+                }
+            
+             "Question_number listed in prompt(eg. "12")":
+                {
+                    "Question": "Original text of question 1",
+                    "Reasons": "The question is intended for students to perform the work of ..., which does/does not reflect the `practice name`.",
+                    "Answer": "Yes/No"
+                }
+            <continue...>
+        }
+```
+
+Use ` `` ` if you want to quote some phrases.
+
+### Example Output
+```JSON
+    "34": {
+        "Question": "Set the population proportion slider to match your answer in the previous question. When you click `setup` button and then the \u201ctake sample\u201d button the model will take an SRS of 5 traffic stops and report the proportion of drivers who identify as black. Take a few samples. Do you get proportions close to the actual value? Explain why you do or do not.",
+        "Reasons": "The question reflects the `Algorithm Practices` as it involves the subpractices of `Using an algorithm to solve a problem`, `Selecting an appropriate algorithm to solve a problem`, `Assessing the efficiency, correctness, and clarity of an algorithm`.",
+        "Answer": "Yes",
+        "Correct Answer": "Yes"
+    },
+    "35": {
+        "Question": "On the next page you're going to do some work with sampling distributions. Define the term `sampling distribution` in one sentence.",
+        "Reasons": "The question does not reflect the `Algorithm Practices` as it does not involve any of the subpractices.",
+        "Answer": "No",
+        "Correct Answer": "No"
+```
+
+
+### Model Step
+The model used in this test is **text-davinci-003**
+
+### Next Step
+
 1. Try simplified prompt 
 2. Consider GPT-4?
 3. Revise Question Coding
