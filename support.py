@@ -1,4 +1,8 @@
 import json
+import os
+
+index = int(os.environ.get('index', 0))
+iteration = int(os.environ.get('iteration', 0))
 
 def combine_data(iteration):
     start = 1
@@ -23,4 +27,4 @@ def combine_data(iteration):
     print(f"Combined data saved to '{output_file}'.")
 
 # Example usage: combining data from 1 to 50
-combine_data(4)
+combine_data(iteration)

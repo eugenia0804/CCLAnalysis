@@ -4,6 +4,11 @@ from llm import get_gpt_response
 import json
 import pandas as pd
 import re
+import sys
+import os
+
+index = int(os.environ.get('index', 0))
+iteration = int(os.environ.get('iteration', 0))
 
 def classify_questions(index,start_q,end_q):
     sys_prompt, usr_prompt = formulate_chat_prompt(index,start_q,end_q)
@@ -43,8 +48,6 @@ def store_result(index,start_q,end_q,iteration):
   with open('results/iteration-'+str(iteration)+'/results/'+str(start_q)+'to'+str(end_q)+'.json', 'w') as file:
     json.dump(final_result, file)
 
-  if len(final_result) != end_q - start_q:
-    print(f"The result from question {start_q} to {end_q} is incomplete.")
     
   return final_result
     
@@ -61,14 +64,7 @@ def run_all(index, iteration):
     json.dump(result_dict, file)
   return 
 
-print('work-stream began')
-run_all(index = 2, iteration = 4)
 
-def run_first_ten(index, iteration):
-    question_df = get_questions()
-    result_dict = {}
-    result_dict.update(store_result(index, 1, 10, iteration))
-    keys = result_dict.keys()
-    result_json = json.dumps(result_dict, indent=4)
-    print(result_json) 
-    return
+print('work-stream began')
+run_all(index, iteration)
+

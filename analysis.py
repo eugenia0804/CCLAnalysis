@@ -3,6 +3,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import confusion_matrix, accuracy_score
+import os
+
+index = int(os.environ.get('index', 0))
+iteration = int(os.environ.get('iteration', 0))
 
 def output_analysis(iteration):
     with open(f'results/iteration-{iteration}/final/1to90.json') as file:
@@ -33,4 +37,5 @@ def output_analysis(iteration):
     
     return 
 
-output_analysis(4)
+
+output_analysis(iteration)
