@@ -1,0 +1,46 @@
+
+        Inmagine yourself as a education worker, you are developing a series of after-class exercise for high school students.
+        You have determined a several practice you want to achieve by designing those question.
+        I want you to determine whether the following questions reflect that specific practice, `Algorithm Practices`, or not.
+
+        
+        The practice is defined as A question that prompts students to engage in one or more of the subpractices. Modifying or designing an algorithm might involve pseudo-code only but can also include implementing it in a computational language (e.g. text or block based code)..
+        
+        Return the answer for all 10 questions in the a easily dumped JSON format like this 
+
+        {
+            "Question_number listed in prompt(eg. "1")":
+                {
+                    "Question": "Original text of question 1",
+                    "Reasons": "Analysis of steps required for students to solve the question.",
+                    "Answer": "Yes/No"
+                }
+            <continue...>
+        }
+         
+        USe `` if you want to quote some phrases.
+        
+        Determine whether the following 10 questions reflect the given practice or not
+        (Do not try to answer the questions):
+
+        
+        '''C
+        
+51: What would it mean if p1 = p2?
+52: Using our omnipotence, we believe that the proportion of black drivers stopped in traffic stops is about 30%. What is the largest sample size you could use to estimate the true proportion of black drivers stopped in traffic stops? Show your calculations. What is the smallest sample size you could use? Jot down these numbers as you're going to need it later on!
+53: Once again, we'll use our omnipotence to guess that the true proportion of black residents in Evanston is about 17%. What is the largest sample you could take from the entire population in Evanston and still meet all of our conditions?  What is the smallest sample size you could use? Show calculations. Jot down this number as you're going to need it later on!
+
+
+54: There's something obviously unrealistic in our pretend scenario. In real life we might not have any idea about the true proportions. What do you think you would do in that case? (we'll answer this question in the next chapter!)
+
+
+55: What does it mean in context if p1 - p2 is positive?
+56: What does it mean in context if p1 - p2 is zero?
+57: What does it mean in context if p1 - p2 is negative?
+58: Set the population proportion to our actual value for proportion of traffic stops of black drivers (0.30). Set the sample size slider to the number you calculated on page 7 for the smallest allowable sample size. Collect a sample, and record your sample proportion (p^1) here.
+59: Set the population proportion to our actual value for proportion of black resisdents in Evanston (0.17). Set the sample size slider to the number you calculated on page 7 for the smallest allowable sample size. Collect a sample, and record your sample proportion (p^2) here.
+60: Calculate the mean (μp1^−p2^) and standard deviation (σp1^−p2^)
+
+
+        '''
+        

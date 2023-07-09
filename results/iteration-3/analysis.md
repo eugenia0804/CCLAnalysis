@@ -4,8 +4,8 @@ Accuracy: 62.2%
 Confusion Matrix
 |       | Predicted Positive | Predicted Negative |
 | ----- | ------------------ | ------------------ |
-| True  | 43                 | 7                  |
-| False | 27                 | 13                 |
+| True  | 13                 | 27                 |
+| False | 7                  | 43                 |
 
 ### Difference from Last Iteration
 Change the 'template' part in prompt into a relatively non-restrictive instruction, intended to fully utilize the power of reasoning before making decision.

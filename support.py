@@ -2,7 +2,7 @@ import json
 
 def combine_data(start, end):
     # List of file names
-    file_names = [f'Results/iteration-3/results/{i}to{i+9}.json' for i in range(start, end, 10)]
+    file_names = [f'results/iteration-4/results/{i}to{i+9}.json' for i in range(start, end, 10)]
 
     # Create an empty dictionary to store the combined data
     combined_data = {}
@@ -14,7 +14,7 @@ def combine_data(start, end):
             combined_data.update(data)
 
     # Save the combined data to a new JSON file
-    output_file = f'Results/iteration-3/final/{start}to{end}.json'
+    output_file = f'Results/iteration-4/final/{start}to{end}.json'
     with open(output_file, 'w') as file:
         json.dump(combined_data, file, indent=4)
 

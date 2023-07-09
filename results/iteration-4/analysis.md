@@ -1,20 +1,39 @@
 ### Topline Findings
-Accuracy: 67.8%
+Accuracy: 53.3%
 
 Confusion Matrix
 |       | Predicted Positive | Predicted Negative |
 | ----- | ------------------ | ------------------ |
-| True  | 19                 | 21                 |
-| False | 8                  | 42                 |
+| True  | 33                 | 7                  |
+| False | 35                 | 15                 |
 
 ### Difference from Last Iteration
-Shorten the prompt to make it more efficient & clear. Specific changes include remove the subpractices list & reduce the number of samples in the template.
+Change from completion model to chat model (gpt-turbo-3.5-16k), split up system prompt and user prompt, further reduce restriction in reasoning template. The porpotion of false negative has been greatly increased.
 
 
 ### Example Prompt
+#### System Prompt
 Imagine yourself as an education worker, you are developing a series of after-class exercises for high school students. You have determined several practices you want to achieve by designing these questions. Your task is to determine whether the following questions reflect that specific practice or not.
 
 The name of the practice you need to pay attention to is `Algorithm Practices`. The practice is defined as a question that prompts students to engage in one or more of the subpractices. Modifying or designing an algorithm might involve pseudo-code only but can also include implementing it in a computational language (e.g. text or block-based code).
+
+Return the answer for all 10 questions in an easily dumped JSON format like this:
+
+```JSON
+{
+    "Question_number listed in prompt(eg. "1")":
+        {
+            "Question": "Original text of question 1",
+            "Reasons": "Analysis of steps required for students to solve the question.",
+            "Answer": "Yes/No"
+        }
+    <continue...>
+}
+```
+
+Use ` `` ` if you want to quote some phrases.
+
+#### User Prompt
 
 Determine whether the following 10 questions reflect the given practice or not (Do not try to answer the questions):
 
@@ -31,45 +50,27 @@ Determine whether the following 10 questions reflect the given practice or not (
 10: Click `setup` and then `collect sample`. What did the model do?
 ```
 
-Return the answer for all 10 questions in an easily dumped JSON format like this:
-
-```JSON
-{
-            "Question_number listed in prompt(eg. "1")":
-                {
-                    "Question": "Original text of question 1",
-                    "Reasons": "The question is intended for students to perform the work of ..., which does/does not reflect the `practice name`.",
-                    "Answer": "Yes/No"
-                }
-            <continue...>
-        }
-```
-
-Use ` `` ` if you want to quote some phrases.
-
 ### Example Output
 ```JSON
-    "10": {
-        "Question": "Click `setup` and then `collect sample`. What did the model do?",
-        "Reasons": "The question is intended for students to perform the work of designing an algorithm, which does not reflect the `Algorithm Practices`.",
-        "Answer": "No",
+    "1": {
+        "Question": "What is the parameter of interest? What symbol is used to represent this value?",
+        "Reasons": "This question prompts students to identify the parameter of interest and its representation symbol.",
+        "Answer": "Yes",
         "Correct Answer": "No"
     },
-    "11": {
-        "Question": "Press the `collect sample` button 30 times. Drag the word `Mean` from the table to the horizontal axis of the empty graph. The graph is starting to take shape, but it cannot be called a sampling distribution yet... Why not?",
-        "Reasons": "The question does not reflect the `Algorithm Practices` as it does not involve modifying or designing an algorithm.",
-        "Answer": "No",
-        "Correct Answer": "Yes"
+    "2": {
+        "Question": "What is the statistic obtained from the sample? What symbol is used to represent this value?",
+        "Reasons": "This question prompts students to identify the statistic obtained from a sample and its representation symbol.",
+        "Answer": "Yes",
+        "Correct Answer": "No"
 ```
 
 
 ### Model Step
-The model used in this test is **text-davinci-003**
+The model used in this test is **gpt-turbo-3.5-16k**
 
 ### Next Step
 
-  1. Exploring the use of GPT-4.
-  2. Revising the format of questions to fit a more structured coding system.
-  3. Providing examples in the coding system to call out.
-  4. Exploring the usage of Google Palm to enforce explained answer writing.
-  5. Testing out non-restricted explanation formats.
+1. Revise reasoning part
+2. Provide examples
+3. Google Palm

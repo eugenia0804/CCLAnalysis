@@ -4,8 +4,8 @@ Accuracy: 64.5%
 Confusion Matrix
 |       | Predicted Positive | Predicted Negative |
 | ----- | ------------------ | ------------------ |
-| True  | 43                 | 7                  |
-| False | 25                 | 15                 |
+| True  | 15                 | 25                 |
+| False | 7                  | 43                 |
 
 ### Difference from Last Iteration
 Shorten the prompt to make it more efficient & clear. Specific changes include remove the subpractices list & reduce the number of samples in the template.

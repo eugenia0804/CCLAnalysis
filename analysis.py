@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import confusion_matrix, accuracy_score
-with open('Results/iteration-3/final/1to90.json') as file:
+with open('results/iteration-3/final/1to90.json') as file:
     json_object = json.load(file)
 
 answers = []

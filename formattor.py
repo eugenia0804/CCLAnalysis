@@ -10,5 +10,5 @@ def format_json(file_path):
         file.write(pretty_json)
 
 # Example usage
-file_path = 'results/iteration-1/final/1to90.json'
+file_path = 'results/iteration-4/final/1to90.json'
 format_json(file_path)
