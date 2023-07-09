@@ -63,3 +63,12 @@ def run_all(index, iteration):
 
 print('work-stream began')
 run_all(index = 2, iteration = 4)
+
+def run_first_ten(index, iteration):
+    question_df = get_questions()
+    result_dict = {}
+    result_dict.update(store_result(index, 1, 10, iteration))
+    keys = result_dict.keys()
+    result_json = json.dumps(result_dict, indent=4)
+    print(result_json) 
+    return

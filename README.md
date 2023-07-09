@@ -21,8 +21,9 @@ Analysis on CT-STEM practice questions using LLM
 ├── LICENSE                               # License information for the project
 └── README.md                             # README file with project information
 ```
-## Reflection
+## Command to run first ten questions
 
-iteration 1: 
-1. Code to handle incomplete output
-2. Modify prompt to make it better handle false positives
+```
+set index=2 && set iteration=4
+python main.py -c "print('Running first ten......'); run_first_ten(%index%, %iteration%)"
+```
