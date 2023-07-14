@@ -21,23 +21,8 @@ Analysis on CT-STEM practice questions using LLM
 ├── LICENSE                               # License information for the project
 └── README.md                             # README file with project information
 ```
-## Command to run first ten questions
-
+## How to rerun a specific iteration
 ```
-$ export index=2
-$ export iteration=4
-$ python example.py
-```
-You should see the resulted json structured gpt respond printed out.
-
-## How to run the full iteration:
-
-You first need to make sure that the file structure of the new iteration exist in the **results** folder:
-```
-$ export index=2
-$ export iteration=4
-$ python main.py #Run all results
-$ python support.py #Combine results into a single json file
-$ python analysis.py #Perform data analysis on all results
+bash rerun.sh
 ```
 
