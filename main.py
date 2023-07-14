@@ -6,16 +6,23 @@ import pandas as pd
 import re
 import sys
 import os
+import importlib
 
 index = int(os.environ.get('index', 0))
 iteration = int(os.environ.get('iteration', 0))
 
+prompt = importlib.import_module(f'iteration-{str(iteration)}.prompt-iteration-{str(iteration)}')
+
+
 def classify_questions(index,start_q,end_q):
-    sys_prompt, usr_prompt = formulate_chat_prompt(index,start_q,end_q)
-    #llm = get_openai()
-    result = get_gpt_response(sys_prompt, usr_prompt)  
-    print('llm completed')
-    return sys_prompt + usr_prompt , result
+  if iteration <= 3:
+    prompt = prompt.formulate_prompt(index, start_q, end_q)
+    result = get_openai(prompt)
+  else:
+    sys_prompt, usr_prompt = prompt.formulate_chat_prompt(index,start_q,end_q)
+    result = get_gpt_response(sys_prompt, usr_prompt) 
+  print('llm completed')
+  return sys_prompt + usr_prompt , result
 
 def store_result(index,start_q,end_q,iteration): 
   [prompt, results] = classify_questions(index,start_q,end_q)

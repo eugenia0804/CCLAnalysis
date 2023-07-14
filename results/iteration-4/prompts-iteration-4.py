@@ -133,7 +133,7 @@ def formulate_prompt(index, start_q, end_q):
     SYSTEM_PROMPT = INTRO_PROMPT + CODEBOOK_PROMPT #+ EXAMPLES
     PROMPT = QUESTION_INTRO + QUESTION_TEXT + OUTPUT_PROMPT
     
-    return SYSTEM_PROMPT + PROMPT
+    return SYSTEM_PROMPT, PROMPT
 
 
 

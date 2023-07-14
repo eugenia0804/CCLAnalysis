@@ -1,182 +1,182 @@
 {
     "1": {
         "Question": "What is the parameter of interest? What symbol is used to represent this value?",
-        "Reasons": "This question prompts students to identify the parameter of interest and its representation symbol.",
+        "Reasons": "This question prompts students to identify the parameter of interest and the symbol used to represent it, which involves analyzing and understanding the concept of parameters in statistics.",
         "Answer": "Yes",
         "Correct Answer": "No"
     },
     "2": {
         "Question": "What is the statistic obtained from the sample? What symbol is used to represent this value?",
-        "Reasons": "This question prompts students to identify the statistic obtained from a sample and its representation symbol.",
+        "Reasons": "This question prompts students to identify the statistic obtained from a sample and the symbol used to represent it, which involves analyzing and understanding the concept of statistics in statistics.",
         "Answer": "Yes",
         "Correct Answer": "No"
     },
     "3": {
         "Question": "How many samples of size 2 can be taken from this population?",
-        "Reasons": "This question prompts students to calculate the number of samples of a specific size that can be taken from a population.",
+        "Reasons": "This question prompts students to calculate the number of possible samples of size 2 that can be taken from a given population, which involves analyzing and understanding the concept of sample sizes and combinations.",
         "Answer": "Yes",
         "Correct Answer": "No"
     },
     "4": {
         "Question": "What is the parameter of interest for this situation?",
-        "Reasons": "This question prompts students to identify the parameter of interest in a specific situation.",
+        "Reasons": "This question prompts students to identify the parameter of interest in a given situation, which involves analyzing and understanding the context and purpose of the situation.",
         "Answer": "Yes",
         "Correct Answer": "No"
     },
     "5": {
         "Question": "What statistic are we using to estimate the parameter of interest for this situation?",
-        "Reasons": "This question prompts students to identify the statistic used to estimate the parameter of interest in a specific situation.",
+        "Reasons": "This question prompts students to identify the statistic used to estimate the parameter of interest in a given situation, which involves analyzing and understanding the concept of estimation and the relationship between parameters and statistics.",
         "Answer": "Yes",
         "Correct Answer": "No"
     },
     "6": {
         "Question": "Do you think taking a sample this size from this population effectively estimates the mean score of the population?",
-        "Reasons": "This question prompts students to analyze and evaluate the effectiveness of taking a sample of a specific size in estimating the mean score of a population.",
+        "Reasons": "This question prompts students to analyze and evaluate the effectiveness of taking a sample of a certain size from a population in estimating the mean score of the population, which involves understanding the concept of sampling and its implications on estimation.",
         "Answer": "Yes",
         "Correct Answer": "No"
     },
     "7": {
         "Question": "Calculate the sample mean for all possible samples of size 2 from this population.",
-        "Reasons": "This question prompts students to calculate the sample mean for all possible samples of a specific size from a population.",
+        "Reasons": "This question prompts students to calculate the sample mean for all possible samples of size 2 from a given population, which involves applying the concept of sample means and understanding the calculation process.",
         "Answer": "Yes",
         "Correct Answer": "Yes"
     },
     "8": {
         "Question": "Create a dotplot of your results from question #2. Create your sketch below.",
-        "Reasons": "This question prompts students to create a dotplot based on the results obtained from a previous question.",
+        "Reasons": "This question prompts students to create a dotplot of the results obtained from question #2, which involves applying the concept of dotplots and visualizing the data.",
         "Answer": "Yes",
         "Correct Answer": "Yes"
     },
     "9": {
         "Question": "In most real-life situations, we cannot create the dotplot of all possible samples of size n from the entire population (size N). Why not?",
-        "Reasons": "This question prompts students to analyze and explain why it is not feasible to create a dotplot of all possible samples of a specific size from a population in real-life situations.",
+        "Reasons": "This question prompts students to analyze and understand the limitations of creating a dotplot of all possible samples from a population in real-life situations, which involves considering factors such as time, resources, and practicality.",
         "Answer": "Yes",
         "Correct Answer": "No"
     },
     "10": {
         "Question": "Click `setup` and then `collect sample`. What did the model do?",
-        "Reasons": "This question prompts students to interact with a model and describe the actions performed.",
+        "Reasons": "This question prompts students to analyze and understand the actions performed by a model after clicking certain buttons, which involves interpreting and understanding the functionality of the model.",
         "Answer": "Yes",
         "Correct Answer": "No"
     },
     "11": {
         "Question": "Press the `collect sample` button 30 times. Drag the word `Mean` from the table to the horizontal axis of the empty graph. The graph is starting to take shape, but it cannot be called a sampling distribution yet... Why not?",
-        "Reasons": "The question prompts students to engage in the subpractice of modifying or designing an algorithm by pressing the `collect sample` button and dragging the word `Mean` to the graph. However, it does not explicitly ask students to write pseudo-code or implement the algorithm in a computational language.",
-        "Answer": "No",
+        "Reasons": "The question prompts students to modify or design an algorithm by pressing the `collect sample` button and dragging the word `Mean` to the graph. It involves implementing the algorithm in a computational language.",
+        "Answer": "Yes",
         "Correct Answer": "Yes"
     },
     "12": {
         "Question": "A school administrator took a sample of 2 AP statistics students and found their average AP test score to be 1.5. Based on that sample, the Administrator is claiming that the mean test score for all AP stats students at ETHS is 1.5. Do you have substantial evidence to refute their claim? You just created a statistical model - use it to explain to the administrator that their estimate is probably w...",
-        "Reasons": "The question prompts students to engage in the subpractice of modifying or designing an algorithm by using a statistical model to refute the administrator's claim. However, it does not explicitly ask students to write pseudo-code or implement the algorithm in a computational language.",
-        "Answer": "No",
+        "Reasons": "The question prompts students to modify or design an algorithm by using a statistical model to refute the administrator's claim. It involves implementing the algorithm in a computational language.",
+        "Answer": "Yes",
         "Correct Answer": "Yes"
     },
     "13": {
         "Question": "What was wrong with the administrator's sample?",
-        "Reasons": "The question prompts students to engage in the subpractice of analyzing the administrator's sample. However, it does not explicitly ask students to modify or design an algorithm.",
+        "Reasons": "The question prompts students to analyze the administrator's sample and identify what was wrong with it.",
         "Answer": "No",
         "Correct Answer": "Yes"
     },
     "14": {
         "Question": "On the left side of the screen you see a table. Click on one of the cells in the row with `index` 17. This should highlight one single dot on the dotplot. Explain what that dot represents in the context of the situation.",
-        "Reasons": "The question prompts students to engage in the subpractice of modifying or designing an algorithm by clicking on a cell in the table. However, it does not explicitly ask students to write pseudo-code or implement the algorithm in a computational language.",
-        "Answer": "No",
+        "Reasons": "The question prompts students to modify or design an algorithm by clicking on a specific cell in the table and explaining what the highlighted dot represents. It involves implementing the algorithm in a computational language.",
+        "Answer": "Yes",
         "Correct Answer": "Yes"
     },
     "15": {
         "Question": "Suppose an administrator is claiming that the true Mean score of the population is 3.2. Do you have convincing evidence to refute their claim? Explain.",
-        "Reasons": "The question prompts students to engage in the subpractice of modifying or designing an algorithm by using evidence to refute the administrator's claim. However, it does not explicitly ask students to write pseudo-code or implement the algorithm in a computational language.",
-        "Answer": "No",
+        "Reasons": "The question prompts students to modify or design an algorithm by using convincing evidence to refute the administrator's claim. It involves implementing the algorithm in a computational language.",
+        "Answer": "Yes",
         "Correct Answer": "Yes"
     },
     "16": {
         "Question": "First, we'll create the same sampling distribution that we created yesterday. Use the model above to create the sampling distribution for the mean scores of samples of 2 students (n=2) taken from a population of 48 students (N=48).\n\n1) Set the slider and click `setup` and `collect samples.` The sampling will happen faster if you pull the `model speed` slider all the way to the right.\n\n2) Click the...",
-        "Reasons": "The question prompts students to engage in the subpractice of modifying or designing an algorithm by setting the slider, clicking `setup` and `collect samples`, and clicking something else. It also mentions using pseudo-code or implementing the algorithm in a computational language. Therefore, it reflects the practice of Algorithm Practices.",
+        "Reasons": "The question prompts students to modify or design an algorithm by setting the slider, clicking `setup` and `collect samples`, and clicking something else. It involves implementing the algorithm in a computational language.",
         "Answer": "Yes",
         "Correct Answer": "Yes"
     },
     "17": {
         "Question": "Now we're going to do the same thing, except instead of calculating the mean score for our sample, we're going to calculate the MAXIMUM score of our sample. We (Mr. Mickelson and Mr. Mills) made this model, so we can change it in order to explore a different statistic. We're going to change the model to find the maximum of each sample.\n\nNote: If you need to start fresh just reload the page and ev...",
-        "Reasons": "The question prompts students to engage in the subpractice of modifying or designing an algorithm by changing the model to calculate the maximum score. It also mentions using pseudo-code or implementing the algorithm in a computational language. Therefore, it reflects the practice of Algorithm Practices.",
+        "Reasons": "The question prompts students to modify or design an algorithm by changing the model to calculate the maximum score of each sample. It involves implementing the algorithm in a computational language.",
         "Answer": "Yes",
         "Correct Answer": "Yes"
     },
     "18": {
         "Question": "Now erase that data (either with the trashcan icon under `tables` or refreshing the page) and do the same thing using the minimum statistic (just repeat what you did for Max, just use the word Min). Is the mean of this sampling distribution the same as the actual value of the population minimum?",
-        "Reasons": "The question prompts students to engage in the subpractice of modifying or designing an algorithm by erasing data and using the minimum statistic. It also mentions using pseudo-code or implementing the algorithm in a computational language. Therefore, it reflects the practice of Algorithm Practices.",
+        "Reasons": "The question prompts students to modify or design an algorithm by erasing data and using the minimum statistic. It involves implementing the algorithm in a computational language.",
         "Answer": "Yes",
         "Correct Answer": "Yes"
     },
     "19": {
         "Question": "Do you think the mean is a biased estimator? Explain your reasoning.",
-        "Reasons": "The question prompts students to engage in the subpractice of analyzing whether the mean is a biased estimator. However, it does not explicitly ask students to modify or design an algorithm.",
+        "Reasons": "The question prompts students to analyze and explain whether the mean is a biased estimator.",
         "Answer": "No",
         "Correct Answer": "Yes"
     },
     "20": {
         "Question": "On the next page we'll use the same model but increase the size of our sample (n). What do you think will happen to the sampling distribution? How will that show up in the model?",
-        "Reasons": "The question prompts students to engage in the subpractice of modifying or designing an algorithm by increasing the sample size. However, it does not explicitly ask students to write pseudo-code or implement the algorithm in a computational language.",
+        "Reasons": "The question prompts students to analyze and predict the effect of increasing the sample size on the sampling distribution and how it will show up in the model.",
         "Answer": "No",
         "Correct Answer": "Yes"
     },
     "21": {
         "Question": "On the next page you'll be asked to use the model to see how sample size affects the variability of the sampling distribution. Make a plan for how you'll use the model to investigate this question.",
-        "Reasons": "The question prompts students to make a plan for investigating how sample size affects the variability of the sampling distribution, which involves designing an algorithm.",
+        "Reasons": "The question prompts students to make a plan for investigating how sample size affects the variability of the sampling distribution.",
         "Answer": "Yes",
         "Correct Answer": "No"
     },
     "22": {
         "Question": "Use your plan and investigate how changing the sample size affects the variability of the sampling distribution (you can show the standard deviation on your graphs in the same way that we showed the mean, go back to page 1 if you need to!). Was your prediction on the previous page correct?",
-        "Reasons": "The question prompts students to investigate how changing the sample size affects the variability of the sampling distribution, which involves implementing an algorithm.",
+        "Reasons": "The question prompts students to investigate how changing the sample size affects the variability of the sampling distribution and evaluate the correctness of their prediction.",
         "Answer": "Yes",
         "Correct Answer": "Yes"
     },
     "23": {
         "Question": "By what factor do you need to increase the sample size in order for the standard deviation to be cut in half?",
-        "Reasons": "The question prompts students to calculate the factor by which the sample size needs to be increased to achieve a specific outcome, which involves designing an algorithm.",
+        "Reasons": "The question prompts students to calculate the factor by which they need to increase the sample size to achieve a specific reduction in standard deviation.",
         "Answer": "Yes",
         "Correct Answer": "Yes"
     },
     "24": {
         "Question": "By what factor do you think you need to increase sample size in order to reduce the standard deviation to 1/3 of its value?",
-        "Reasons": "The question prompts students to estimate the factor by which the sample size needs to be increased to achieve a specific outcome, which involves designing an algorithm.",
+        "Reasons": "The question prompts students to estimate the factor by which they need to increase the sample size to achieve a specific reduction in standard deviation.",
         "Answer": "Yes",
         "Correct Answer": "Yes"
     },
     "25": {
         "Question": "Based on your answers to the previous questions, can you guess at least part of what the formula for the standard deviation of a sampling distribution might be?",
-        "Reasons": "The question prompts students to make an educated guess about the formula for the standard deviation of a sampling distribution based on their previous answers, which involves designing an algorithm.",
+        "Reasons": "The question prompts students to make an educated guess about the formula for the standard deviation of a sampling distribution based on their previous answers.",
         "Answer": "Yes",
         "Correct Answer": "Yes"
     },
     "26": {
         "Question": "When we're taking samples in real life in order to estimate the true value of a parameter, is it better to have more or less variation?",
-        "Reasons": "The question prompts students to determine whether having more or less variation is better when taking samples to estimate a parameter, which involves analyzing and applying algorithmic principles.",
+        "Reasons": "The question prompts students to analyze the impact of variation on the accuracy of estimating the true value of a parameter.",
         "Answer": "Yes",
         "Correct Answer": "No"
     },
     "27": {
         "Question": "On pages 2-3 you learned about bias. On page 4 you learned about variability. Explain the difference between those 2 concepts in a way that a freshman could understand. You are welcome to use your book and the internet for more definitions and illustrations (I think your book has a really useful graphic on page 481).",
-        "Reasons": "The question prompts students to explain the difference between bias and variability in a way that a freshman could understand, which involves analyzing and applying algorithmic principles.",
+        "Reasons": "The question prompts students to explain the difference between bias and variability in a way that is understandable to a freshman, demonstrating their understanding of the concepts.",
         "Answer": "Yes",
         "Correct Answer": "No"
     },
     "28": {
         "Question": "Ideally, we want the variation in our sampling distribution to be as _______ as possible.",
-        "Reasons": "The question prompts students to fill in the blank with a word that represents the desired level of variation in a sampling distribution, which involves analyzing and applying algorithmic principles.",
+        "Reasons": "The question prompts students to fill in the blank with a word that reflects the desired level of variation in a sampling distribution.",
         "Answer": "Yes",
         "Correct Answer": "No"
     },
     "29": {
         "Question": "Two graduate students are studying the effects of a new cancer drug. Student A took a sample of size 10 from the population, while student B took a sample of size 30. Whose results are better? Why? What do we mean by 'better'?",
-        "Reasons": "The question prompts students to compare and evaluate the results of two graduate students based on their sample sizes, which involves analyzing and applying algorithmic principles.",
+        "Reasons": "The question prompts students to compare the results of two different sample sizes and evaluate which one is better, while also defining what is meant by 'better' in this context.",
         "Answer": "Yes",
         "Correct Answer": "No"
     },
     "30": {
         "Question": "How many total traffic stops do you think that EPD made in the 6.75 months between 1/1/20 and 7/23/20? I realize you have no great way of knowing, take a guess!",
-        "Reasons": "The question prompts students to make an estimation of the total traffic stops made by EPD within a specific time period, which involves designing an algorithm.",
-        "Answer": "Yes",
+        "Reasons": "The question prompts students to make an estimation of the total number of traffic stops made by EPD within a specific time period, encouraging them to think critically and make an educated guess.",
+        "Answer": "No",
         "Correct Answer": "No"
     },
     "31": {
