@@ -1,5 +1,7 @@
 # CCLAnalysis
 Analysis on CT-STEM practice questions using LLM
+Intern Project at Northwestern's Center for Connected Learning and Computer-Based Modeling (CCL) (March 2023 - June 2023)
+Using LLMs to understand 
 
 ## Code Structure
 ```plaintext

@@ -1,6 +1,6 @@
 from code.utils import get_questions, get_answers
 from prompts import formulate_chat_prompt
-from llm import get_gpt_response
+from util.llm import get_gpt_response
 import json
 import pandas as pd
 import re
