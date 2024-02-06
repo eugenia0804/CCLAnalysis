@@ -70,3 +70,17 @@ def formulate_prompt(practice_index,start_q,end_q):
 '''
 
 #print(json.dumps(get_codebook(),indent = 1))
+
+
+def format_json(file_path):
+    with open(file_path, 'r') as file:
+        data = json.load(file)
+    
+    pretty_json = json.dumps(data, indent=4)
+
+    with open(file_path, 'w') as file:
+        file.write(pretty_json)
+
+# Example usage
+#file_path = 'results/iteration-4/final/1to90.json'
+#format_json(file_path)
